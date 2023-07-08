@@ -58,7 +58,7 @@ a{text-decoration:none}
 }
 #hero h1,#hero h2,#hero h3,#hero p{color:#fcfcfc}
 #hero h1{margin:0 0 7px;font-size:50px;font-weight:500;letter-spacing:0;line-height:1.17em}
-#hero{background-image: url(../assets/css/banner.jpg); background-position: center center;background-repeat: no-repeat; background-size: cover; -webkit-box-pack: center;padding:130px 0}
+#hero{background-image: url(../assets/img/banner.jpg); background-position: center center;background-repeat: no-repeat; background-size: cover; -webkit-box-pack: center;padding:130px 0}
 #hero .container{padding-top:20px}
 #hero .hide{display:none}
 #hero img{width:80%}
