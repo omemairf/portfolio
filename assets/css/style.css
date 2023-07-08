@@ -58,11 +58,11 @@ a{text-decoration:none}
 }
 #hero h1,#hero h2,#hero h3,#hero p{color:#fcfcfc}
 #hero h1{margin:0 0 7px;font-size:50px;font-weight:500;letter-spacing:0;line-height:1.17em}
-#hero{background-image: url('../assets/img/banner.jpg'); background-position: center center;background-repeat: no-repeat; background-size: cover; -webkit-box-pack: center;padding:130px 0}
+#hero{background-image: url(assets/css/banner.jpg); background-position: center center;background-repeat: no-repeat; background-size: cover; -webkit-box-pack: center;padding:130px 0}
 #hero .container{padding-top:20px}
 #hero .hide{display:none}
 #hero img{width:80%}
-#hero h2{font-family:'Shrikhand',cursive;font-size:34px;font-weight:300;text-transform:uppercase;margin:15px 0;text-shadow:0 0 0 #cd8914,1px 1px 0 #cd8914,2px 2px 0 #cd8914,3px 3px 0 #cd8914,4px 4px 0 #cd8914,5px 5px 0 #cd8914,6px 6px 0 #cd8914,7px 7px 0 #cd8914;color:#fff}
+#hero h2{font-family: 'Playfair Display', serif;font-size:34px;font-weight:300;text-transform:uppercase;margin:15px 0;text-shadow:0 0 0 #cd8914,1px 1px 0 #cd8914,2px 2px 0 #cd8914,3px 3px 0 #cd8914,4px 4px 0 #cd8914,5px 5px 0 #cd8914,6px 6px 0 #cd8914,7px 7px 0 #cd8914;color:#fff}
 #hero h3{line-height:25px;font-size:17px;font-family:poppins;color:#30302ec7}
 #hero .btns{margin-top:30px}  
 #hero .content{text-align: center; z-index:99}
