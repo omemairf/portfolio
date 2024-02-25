@@ -378,8 +378,12 @@ section {
   #hero h2{font-size:19px}
   #hero h3{line-height:22px;font-size:15px}
   .section-title{padding-bottom:20px}
-  html,body{overflow-x:hidden
+  html,body{overflow-x:hidden;}
+  #hero .col-lg-7 {margin: 0;}
+  img.img-fluid.aos-init.aos-animate {
+    margin-top: -40px;width: 50%;}
 }
+
 
 @media screen and (min-width:768px) and (max-width:991px) 
 {
