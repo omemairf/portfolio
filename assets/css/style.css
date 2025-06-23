@@ -50,7 +50,7 @@ h6 {
 --------------------------------------------------------------*/
 section {
   overflow: hidden;
-  padding: 75px 0 12px;
+  padding: 60px 0 12px;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -147,27 +147,28 @@ section {
 # Scroll top button
 --------------------------------------------------------------*/
 .scroll-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: #e9fc89;
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 6px;
+    bottom: 61px;
+    z-index: 99999;
+    background: #083f87;
+    width: 41px;
+    height: 41px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    color: #fff !important;
 }
 
 .scroll-top i {
   font-size: 24px;
-  color: #222;
+  color: #fff;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background: var(--color-primary);
+  background: #fff;
   color: #222;
 }
 
@@ -377,7 +378,7 @@ section {
 .glightbox-clean .gdesc-inner{display:none}
 #portfolio p {
     margin: 0;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 400;
     font-family: "DM Serif Display", serif;
     text-transform: uppercase;
