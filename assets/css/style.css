@@ -23,8 +23,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--color-default);
   border: 1px solid #222;
-  background: rgb(236,205,246);
-  background: linear-gradient(90deg, rgba(236,205,246,1) 0%, rgba(219,212,246,1) 38%, rgba(255,255,255,1) 100%);
+  background: #fffeec;
 }
 
 a {
@@ -77,11 +76,11 @@ section {
 }
 
 .section-header p {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 400;
-  font-family: "DM Serif Display", serif;
-  text-transform: uppercase;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'POPPINS';
+    text-transform: uppercase;
 }
 
 
@@ -253,6 +252,13 @@ section {
 #aboutus .cnt{position:relative;height:400px;background:#fffeec;width:1200px;padding:0 134px}
 #aboutus .btn-herobtn{text-align:left;display:block;margin:0 auto}
 #aboutus .section-header{text-align:center;padding-bottom:29px;padding-top:20px}
+#aboutus h1 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "DM Serif Display", serif;
+    text-transform: uppercase;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
