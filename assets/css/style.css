@@ -249,9 +249,9 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-#aboutus .cnt p{text-align:center}
-#aboutus .cnt{position:relative;height:400px;background:#fffeec;width:1200px;clip-path:ellipse(46% 50% at 51% 50%);padding:0 134px}
-#aboutus .btn-herobtn{text-align:center;display:block;margin:0 auto}
+#aboutus .cnt p{text-align:left;}
+#aboutus .cnt{position:relative;height:400px;background:#fffeec;width:1200px;padding:0 134px}
+#aboutus .btn-herobtn{text-align:left;display:block;margin:0 auto}
 #aboutus .section-header{text-align:center;padding-bottom:29px;padding-top:20px}
 /*--------------------------------------------------------------
 # Services Section
