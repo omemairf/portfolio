@@ -167,15 +167,6 @@ section {
   line-height: 0;
 }
 
-.scroll-top:hover {
-  background: #fff;
-  color: #222;
-}
-
-.scroll-top.active {
-  visibility: visible;
-  opacity: 1;
-}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -257,7 +248,7 @@ section {
 #aboutus .btn-herobtn {
     text-align: left;
     display: block;
-    margin: 0 18px 0px -6px;
+    margin: 0 0px 0px -6px;
 }
 #aboutus .section-header{text-align:center;padding-bottom:29px;padding-top:20px}
 #aboutus h1 {
