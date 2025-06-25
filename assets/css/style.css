@@ -228,7 +228,7 @@ section {
   .navbar a,.navbar a:focus{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;font-family:var(--font-secondary);border-bottom:0 solid #fff;font-size:16px;font-weight:500;color:#fff;white-space:nowrap;transition:.3s}
   .navbar a i,.navbar a:focus i{font-size:12px;line-height:0;margin-left:5px}
   .navbar a:hover,.navbar li:hover>a{color:#fff;        font-weight: 600;}
-  .navbar .active,.navbar .active:focus{color:#000;border-color:var(--color-primary)}
+  .navbar .active,.navbar .active:focus{color:#fff;border-color:var(--color-primary)}
   .navbar .dropdown ul,.navbar .dropdown .dropdown ul{position:static;display:none;padding:10px 0;margin:10px 20px;transition:all .5s ease-in-out;border:1px solid #eee}
   .navbar .dropdown>.dropdown-active,.navbar .dropdown .dropdown>.dropdown-active{display:block}
   .mobile-nav-show{color: #fff;font-size:28px;cursor:pointer;line-height:0;transition:.5s;z-index:9999;margin:0 10px 0 20px}
@@ -241,7 +241,7 @@ section {
 # About Section
 --------------------------------------------------------------*/
 #aboutus .cnt p {
-    text-align: justify;
+    text-align: left;
     font-size: 14px;
 }
 #aboutus .cnt{position:relative;height:400px;background:#fffeec;width:1200px;padding:0 134px}
@@ -374,7 +374,9 @@ section {
     font-family: "DM Serif Display", serif;
     text-transform: uppercase;
 }
-
+section#portfolio {
+    padding: 15px 0 12px;
+}
 /* SERVICES START */
 
 /* RESPONSIVE */
