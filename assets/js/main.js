@@ -19,9 +19,17 @@ window.addEventListener("load", () => {
     const iso = new Isotope(portfolioContainer, {
       itemSelector: ".portfolio-item",
       layoutMode: "fitRows",
+      filter: ".filter-custom" // 👉 Show only Custom Coding projects on load
     });
 
     const portfolioFilters = document.querySelectorAll("#portfolio-flters li");
+
+    // Set 'Custom Coding' as active filter on load
+    portfolioFilters.forEach(el => el.classList.remove("filter-active"));
+    const defaultFilter = document.querySelector('[data-filter=".filter-custom"]');
+    if (defaultFilter) defaultFilter.classList.add("filter-active");
+
+    // Filter button click handling
     portfolioFilters.forEach((filter) => {
       filter.addEventListener("click", function (e) {
         e.preventDefault();
@@ -31,7 +39,7 @@ window.addEventListener("load", () => {
         const filterValue = this.getAttribute("data-filter");
         iso.arrange({ filter: filterValue });
 
-        AOS.refresh(); // Refresh AOS after filter
+        AOS.refresh(); // Refresh AOS animations
       });
     });
 
@@ -48,7 +56,7 @@ window.addEventListener("load", () => {
 
       showMoreBtn.addEventListener("click", () => {
         allItems.forEach(item => item.classList.remove("hidden"));
-        iso.arrange(); // re-arrange Isotope after revealing
+        iso.arrange(); // Re-arrange Isotope after revealing items
         showMoreBtn.style.display = "none";
         AOS.refresh();
       });
@@ -63,23 +71,23 @@ window.addEventListener("load", () => {
     once: true,
   });
 
-// Scroll to top button logic
-const scrollUpBtn = document.getElementById("scrollUpBtn");
+  // Scroll to top button logic
+  const scrollUpBtn = document.getElementById("scrollUpBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollUpBtn.style.display = "block";
-  } else {
-    scrollUpBtn.style.display = "none";
-  }
-});
-
-scrollUpBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollUpBtn.style.display = "block";
+    } else {
+      scrollUpBtn.style.display = "none";
+    }
   });
-});
+
+  scrollUpBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 
   // Swiper - Testimonials
   new Swiper(".testimonials-slider", {
