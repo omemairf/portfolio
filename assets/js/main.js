@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
     const iso = new Isotope(portfolioContainer, {
       itemSelector: ".portfolio-item",
       layoutMode: "fitRows",
-      filter: ".filter-custom" // 👉 Default show Custom Coding only
+      filter: ".filter-custom"
     });
 
     const portfolioFilters = document.querySelectorAll("#portfolio-flters li");
@@ -163,6 +163,15 @@ window.addEventListener("load", () => {
     },
   });
 
-  // GLightbox for portfolio
-  GLightbox({ selector: ".portfolio-lightbox" });
+  // ✅ GLightbox for portfolio - upgraded version
+  const lightbox = GLightbox({
+    selector: ".portfolio-lightbox",
+    touchNavigation: true,
+    loop: true,
+    closeButton: true,         // ✖️ close button visible
+    zoomable: true,
+    openEffect: "zoom",        // fancy open
+    closeEffect: "fade",       // smooth close
+    moreText: "View More",     // optional
+  });
 });
