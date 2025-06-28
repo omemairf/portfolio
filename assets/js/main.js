@@ -12,7 +12,76 @@ window.addEventListener("load", () => {
       navLinks.classList.toggle("active");
     });
   }
-// Swiper - Testimonials
+
+  // Isotope filtering
+  const portfolioContainer = document.querySelector(".portfolio-container");
+  if (portfolioContainer) {
+    const iso = new Isotope(portfolioContainer, {
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
+    });
+
+    const portfolioFilters = document.querySelectorAll("#portfolio-flters li");
+    portfolioFilters.forEach((filter) => {
+      filter.addEventListener("click", function (e) {
+        e.preventDefault();
+        portfolioFilters.forEach((el) => el.classList.remove("filter-active"));
+        this.classList.add("filter-active");
+
+        const filterValue = this.getAttribute("data-filter");
+        iso.arrange({ filter: filterValue });
+
+        AOS.refresh(); // Refresh AOS after filter
+      });
+    });
+
+    // SHOW MORE logic
+    const allItems = document.querySelectorAll(".portfolio-item");
+    const showMoreBtn = document.getElementById("show-more");
+
+    if (allItems.length > 9 && showMoreBtn) {
+      allItems.forEach((item, index) => {
+        if (index >= 9) item.classList.add("hidden");
+      });
+
+      showMoreBtn.style.display = "inline-block";
+
+      showMoreBtn.addEventListener("click", () => {
+        allItems.forEach(item => item.classList.remove("hidden"));
+        iso.arrange(); // re-arrange Isotope after revealing
+        showMoreBtn.style.display = "none";
+        AOS.refresh();
+      });
+    } else if (showMoreBtn) {
+      showMoreBtn.style.display = "none";
+    }
+  }
+
+  // AOS animations
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+
+// Scroll to top button logic
+const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
+  }
+});
+
+scrollUpBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+  // Swiper - Testimonials
   new Swiper(".testimonials-slider", {
     loop: true,
     spaceBetween: 30,
@@ -33,7 +102,22 @@ window.addEventListener("load", () => {
       }
     }
   });
-     // Swiper - Events slider (optional)
+
+  // Swiper - Portfolio Details Slider (optional)
+  new Swiper(".portfolio-details-slider", {
+    speed: 400,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+  });
+
+  // Swiper - Events slider (optional)
   new Swiper(".events-slider", {
     speed: 600,
     loop: true,
@@ -48,36 +132,7 @@ window.addEventListener("load", () => {
       clickable: true,
     },
   });
-      window.addEventListener("load", () => {
-        let portfolioContainer = document.querySelector(".portfolio-container");
-        if (portfolioContainer) {
-          let iso = new Isotope(portfolioContainer, { itemSelector: ".portfolio-item", layoutMode: "fitRows" });
-          let portfolioFilters = document.querySelectorAll("#portfolio-flters li");
-          portfolioFilters.forEach(filter => {
-            filter.addEventListener("click", function(event) {
-              event.preventDefault();
-              portfolioFilters.forEach(f => {
-                f.classList.remove("filter-active");
-              });
-              this.classList.add("filter-active");
-              iso.arrange({ filter: this.getAttribute("data-filter") });
-              initAOS();
-            });
-          });
-        }
-      });
-    
-      GLightbox({ selector: ".portfolio-lightbox" });
-    
-      new Swiper(".portfolio-details-slider", { speed: 400, autoplay: { delay: 5000, disableOnInteraction: false }, pagination: { el: ".swiper-pagination", type: "bullets", clickable: true } });
-    
-      new Swiper(".events-slider", { speed: 600, loop: true, autoplay: { delay: 5000, disableOnInteraction: false }, slidesPerView: "auto", pagination: { el: ".swiper-pagination", type: "bullets", clickable: true } });
-    
-      window.addEventListener("load", () => {
-        initAOS();
-      });
-  
- 
-    }
-  })();
-  
+
+  // GLightbox for portfolio
+  GLightbox({ selector: ".portfolio-lightbox" });
+});
