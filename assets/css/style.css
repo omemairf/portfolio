@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -166,7 +166,7 @@ section {
   .navbar ul{margin:0;padding:0;display:flex;list-style:none;align-items:center}
   .navbar li{position:relative}
   .navbar>ul>li{white-space:nowrap;padding:10px 0 10px 76px}
-  .navbar a,.navbar a:focus{display:flex;align-items:center;justify-content:space-between;padding:0 3px;font-family:var(--font-secondary);font-size:16px;font-weight:600;color:#222;white-space:nowrap;transition:.3s;position:relative;text-transform:uppercase}
+  .navbar a,.navbar a:focus{display:flex;align-items:center;justify-content:space-between;padding:0 3px;font-family:var(--font-secondary);font-size:16px;font-weight:600;color:#fff;white-space:nowrap;transition:.3s;position:relative;text-transform:uppercase}
   .navbar a i,.navbar a:focus i{font-size:12px;line-height:0;margin-left:5px}
   .navbar a:hover:before,.navbar li:hover>a:before,.navbar .active:before{visibility:visible;width:100%}
   .navbar a:hover,.navbar .active,.navbar .active:focus,.navbar li:hover>a{color:#000}
@@ -190,9 +190,29 @@ section {
 /*--------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
-@media (max-width: 1279px) {
-  .navbar{position:fixed;top:0;right:-100%;width:100%;max-width:260px;border-left:1px solid #666;bottom:0;transition:.3s;z-index:9997}
-  .navbar ul{position:absolute;inset:0;padding:16px 0 10px;margin:0;background:#083f87;overflow-y:auto;transition:.3s;z-index:9998}
+@media (max-width: 767px) {
+.navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 260px;
+    border-left: 1px solid #666;
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+  }
+
+  .navbar ul {
+    position: absolute;
+    inset: 0;
+    padding: 16px 0 10px;
+    margin: 0;
+    background: #083f87;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
   .navbar a,.navbar a:focus{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;font-family:var(--font-secondary);border-bottom:0 solid #fff;font-size:16px;font-weight:500;color:#fff;white-space:nowrap;transition:.3s}
   .navbar a i,.navbar a:focus i{font-size:12px;line-height:0;margin-left:5px}
   .navbar a:hover,.navbar li:hover>a{color:#fff;        font-weight: 600;}
