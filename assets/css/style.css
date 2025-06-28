@@ -288,6 +288,11 @@ nav ul li a:hover {
 section#portfolio {
     background: #fff;
 }
+.portfolio h2{font-size: 32px;
+    margin-bottom: 20px;
+    color: #1A1A1A;
+    font-weight: 600;
+    font-family: 'DM Serif Display', serif;}
 .portfolio #portfolio-flters {
   padding: 1px 20px;
     list-style: none;
