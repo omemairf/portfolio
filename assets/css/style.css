@@ -258,9 +258,7 @@ section {
     font-family: "DM Serif Display", serif;
     text-transform: uppercase;
 }
-#aboutus .section-header {
-    text-align: left !important;
-}
+#aboutus .section-header{padding-bottom: 0px;}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
