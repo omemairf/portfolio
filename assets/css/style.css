@@ -419,6 +419,10 @@ background-color: #FF6B57;
 #show-more:active {
   transform: scale(0.98);
 }
+.glightbox-container {
+  background: rgba(0, 0, 0, 0.85); /* softer background */
+  z-index: 9999;
+}
 
 /* HIDE ITEMS INITIALLY */
 .portfolio-item.hidden {
