@@ -19,34 +19,20 @@ window.addEventListener("load", () => {
     const iso = new Isotope(portfolioContainer, {
       itemSelector: ".portfolio-item",
       layoutMode: "fitRows",
-      filter: ".filter-custom" // 👉 Show only Custom Coding projects on load
+      filter: ".filter-custom" // 👉 Default show Custom Coding only
     });
 
     const portfolioFilters = document.querySelectorAll("#portfolio-flters li");
 
-    // Set 'Custom Coding' as active filter on load
+    // Set 'Custom Coding' active by default
     portfolioFilters.forEach(el => el.classList.remove("filter-active"));
     const defaultFilter = document.querySelector('[data-filter=".filter-custom"]');
     if (defaultFilter) defaultFilter.classList.add("filter-active");
 
-    // Filter button click handling
-    portfolioFilters.forEach((filter) => {
-      filter.addEventListener("click", function (e) {
-        e.preventDefault();
-        portfolioFilters.forEach((el) => el.classList.remove("filter-active"));
-        this.classList.add("filter-active");
-
-        const filterValue = this.getAttribute("data-filter");
-        iso.arrange({ filter: filterValue });
-
-        AOS.refresh(); // Refresh AOS animations
-      });
-    });
-
-    // SHOW MORE logic
-    const allItems = document.querySelectorAll(".portfolio-item");
+    const allItems = document.querySelectorAll(".portfolio-item.filter-custom");
     const showMoreBtn = document.getElementById("show-more");
 
+    // Hide items beyond the first 9 on page load
     if (allItems.length > 9 && showMoreBtn) {
       allItems.forEach((item, index) => {
         if (index >= 9) item.classList.add("hidden");
@@ -56,13 +42,49 @@ window.addEventListener("load", () => {
 
       showMoreBtn.addEventListener("click", () => {
         allItems.forEach(item => item.classList.remove("hidden"));
-        iso.arrange(); // Re-arrange Isotope after revealing items
+        iso.arrange(); // Rearrange Isotope after reveal
         showMoreBtn.style.display = "none";
         AOS.refresh();
       });
     } else if (showMoreBtn) {
       showMoreBtn.style.display = "none";
     }
+
+    // Handle filter click
+    portfolioFilters.forEach((filter) => {
+      filter.addEventListener("click", function (e) {
+        e.preventDefault();
+        portfolioFilters.forEach((el) => el.classList.remove("filter-active"));
+        this.classList.add("filter-active");
+
+        const filterValue = this.getAttribute("data-filter");
+        iso.arrange({ filter: filterValue });
+
+        // Reset Show More logic when switching filters
+        if (filterValue === ".filter-custom") {
+          const customItems = document.querySelectorAll(".portfolio-item.filter-custom");
+          if (customItems.length > 9 && showMoreBtn) {
+            customItems.forEach((item, index) => {
+              if (index >= 9) {
+                item.classList.add("hidden");
+              } else {
+                item.classList.remove("hidden");
+              }
+            });
+            showMoreBtn.style.display = "inline-block";
+          } else {
+            customItems.forEach(item => item.classList.remove("hidden"));
+            if (showMoreBtn) showMoreBtn.style.display = "none";
+          }
+        } else {
+          const currentItems = document.querySelectorAll(`.portfolio-item${filterValue}`);
+          currentItems.forEach(item => item.classList.remove("hidden"));
+          if (showMoreBtn) showMoreBtn.style.display = "none";
+        }
+
+        AOS.refresh();
+      });
+    });
   }
 
   // AOS animations
