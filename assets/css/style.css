@@ -418,7 +418,16 @@ section#portfolio {
   .footer-info,.pp,.separet-span{text-align:center}
   .portfolio #portfolio-flters{padding:2px 10px}
   #header.header-scrolled .mobile-nav-toggle{display:block; color: #fff !important;}
-  #aboutus .cnt{clip-path: none; padding: 0 10px; height: 650px;}
+  #aboutus .cnt{clip-path: none; padding: 0 15px;}
+  #aboutus .cnt p {
+    text-align: center;
+    font-size: 13px;
+}
+  #aboutus .section-header {
+    text-align: center !important;
+}
+  #aboutus h1 {
+    text-align: left;font-size: 38px;}
   .heading-4-underline {font-size: 13px;}
   .services {text-align: center;}
 }
