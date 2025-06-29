@@ -403,6 +403,9 @@ background-color: #fcff5b;
     font-family: "Libre Baskerville", serif;
   color: #222;
 }
+.glightbox-clean .gslide-description {
+    display: none !important;
+}
 /* SHOW MORE BUTTON */
 #showMoreBtn {
     color: #fff;
