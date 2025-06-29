@@ -1,24 +1,23 @@
 /* IMPORTING FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-   font-family: 'Inter', sans-serif; /* For content */
+   font-family: "Poppins", sans-serif;
   background-color: #FAFAFA;
   color: #333;
   line-height: 1.6;
     font-weight: 600;
 }
-:root {
-  --font-heading-family: "Figtree Variable", "Figtree", Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
-}
+p{font-family: "Poppins", sans-serif;}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading-family);
+  font-family: "Libre Baskerville", serif;
 }
 .logo {
   font-weight: 700;
@@ -28,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* HEADER */
 header.main-header {
-  background-color: #191f5e;
+  background-color: #A7C4D7;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
@@ -39,7 +38,7 @@ header.main-header {
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
 }
 
 /* NAVIGATION */
@@ -54,7 +53,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-      color: #fff;
+   color: #000;
   font-weight: 500;
   padding: 6px 12px;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -63,7 +62,7 @@ nav ul li a {
 
 nav ul li a:hover {
  
-      color: #fff;
+     color: #000;
 }
 
 /* MENU TOGGLE (hamburger) */
@@ -71,7 +70,7 @@ nav ul li a:hover {
   display: none;
   font-size: 28px;
   cursor: pointer;
-      color: #fff;
+   color: #000;
 }
 
 /* RESPONSIVE */
@@ -96,7 +95,7 @@ nav ul li a:hover {
   }
 
   .nav-links.active {
-    display: flex !important;         background: #191f5e;
+    display: flex !important;         background: #A7C4D7;
   }
 
   nav ul li a {
@@ -108,26 +107,26 @@ nav ul li a:hover {
 /* ABOUT ME */
 .about-me {
   padding: 60px 0;
-    background-color: #191f5e;
+    background-color: #A7C4D7;
     color: #fff;
 }
 
 .about-me h2 {
   font-size: 32px;
   margin-bottom: 20px; 
-  color: #fff;
+   color: #222;
      font-weight: 600;
      font-family: var(--font-heading-family);
 }
 
 .about-me p {
-    font-size: 17px;color: #fff;
+    font-size: 17px; color: #222;
     margin: auto;
     font-family: 'Inter';
 }
 .aboutbtn {
-    color: #fff;
-    background-color: #166a5a;
+       color: #222;
+    background-color: #F5F5F0;
     border: none;
     cursor: pointer;
     font-weight: 500;
@@ -140,9 +139,9 @@ nav ul li a:hover {
     margin-top: 7px;
 }
 .aboutbtn:hover {
-  background-color: #191f5e;
-  color: #fff;
-  transform: translateY(-2px);
+    background-color: #fcff5b;
+    color: #222;
+    transform: translateY(-2px);
 }
 /* TESTIMONIALS SECTION */
 .testimonials-section {
@@ -234,21 +233,21 @@ nav ul li a:hover {
 }
 
 .testimonial-card.dark-theme {
-  background: #166a5a;
-  color: #fff;
-  border: 1px solid #166a5a;
+  background: #fcff5b;
+  color: #222;
+  border: 1px solid #fcff5b;
 }
 
 .testimonial-card.dark-theme .testimonial-text {
-  color: #fff;
+  color: #222;
 }
 
 .testimonial-card.dark-theme .testimonial-client span {
-  color: #fff;
+  color: #222;
 }
 
 .testimonial-card.dark-theme .testimonial-rating i {
-  color: #FFD700;
+  color: #fcff5b;
 }
 
 /* SWIPER PAGINATION */
@@ -264,7 +263,7 @@ nav ul li a:hover {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #191f5e;
+  background-color: #A7C4D7;
 }
 
 /* RESPONSIVE */
@@ -325,9 +324,9 @@ section#portfolio {
 
 .portfolio #portfolio-flters li.filter-active,
 .portfolio #portfolio-flters li:hover {
-  color: #fff;
-background-color: #166a5a;
-    border-color: #166a5a;
+  color: #222;
+background-color: #fcff5b;
+    border-color: #fcff5b;
 }
 
 /* PORTFOLIO CARD */
@@ -422,7 +421,7 @@ background-color: #166a5a;
     margin-top: 20px;
 }
 #showMoreBtn:hover {
-  background-color: #166a5a;
+  background-color: #ffff88;
   color: #ff;
   transform: translateY(-2px);
 }
@@ -439,7 +438,7 @@ background-color: #166a5a;
     bottom: 55px;
     right: 9px;
     z-index: 9999;
-    background-color: #191f5e;
+    background-color: #A7C4D7;
     color: #fff;
     border: none;
     outline: none;
@@ -458,14 +457,14 @@ background-color: #166a5a;
     display: block;
 }
 #scrollUpBtn:hover {
- background-color: #166a5a;
-  color: #fff;
+ background-color: #fcff5b;
+  color: #222;
 }
 
 /* FOOTER */
-footer {
-  background-color: #1A1A1A;
-  color: #fff;
+.footer {
+  background-color: #A7C4D7;
+  color: #222;
   text-align: center;
   padding: 13px 0;
 }
