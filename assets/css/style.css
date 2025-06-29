@@ -401,30 +401,27 @@ background-color: #FF6B57;
   color: #222;
 }
 /* SHOW MORE BUTTON */
-#show-more {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 30px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  background-color: #333;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, transform 0.2s ease;
+#showMoreBtn {
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 100px;
+    padding: 8px 23px;
+    font-family: 'Inter';
+    font-size: 15px;
+    width: 130px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
-
-#show-more:hover {
+#showMoreBtn:hover {
   background-color: #FF6B57;
   color: #ff;
   transform: translateY(-2px);
 }
 
-#show-more:active {
-  transform: scale(0.98);
-}
 
 /* HIDE ITEMS INITIALLY */
 .portfolio-item.hidden {
