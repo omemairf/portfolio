@@ -108,20 +108,20 @@ nav ul li a:hover {
 /* ABOUT ME */
 .about-me {
   padding: 60px 0;
- background-color: #f4f6fe;
-     text-align: left;
+     background-color: #191f5e;
+     text-align: left;color: #fff;
 }
 
 .about-me h2 {
   font-size: 32px;
   margin-bottom: 20px; 
-  color: #1A1A1A;
+  color: #fff;
      font-weight: 600;
      font-family: var(--font-heading-family);
 }
 
 .about-me p {
-    font-size: 17px;
+    font-size: 17px;color: #fff;
     margin: auto;
     font-family: 'Inter';
 }
