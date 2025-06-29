@@ -107,7 +107,7 @@ nav ul li a:hover {
 /* ABOUT ME */
 .about-me {
   padding: 60px 0;
-    background-color: #A7C4D7;
+    background-color:#f4f6fe;
     color: #fff;
 }
 
@@ -116,17 +116,15 @@ nav ul li a:hover {
   margin-bottom: 20px; 
    color: #222;
      font-weight: 600;
-     font-family: var(--font-heading-family);
+     font-family: "Libre Baskerville", serif;
 }
 
 .about-me p {
-    font-size: 17px; color: #222;
+    font-size: 16px; color: #222;
     margin: auto;
-    font-family: 'Inter';
 }
 .aboutbtn {
-       color: #222;
-    background-color: #F5F5F0;
+
     border: none;
     cursor: pointer;
     font-weight: 500;
@@ -134,13 +132,14 @@ nav ul li a:hover {
     transition: background 0.3s ease, transform 0.2s ease;
     border-radius: 100px;
     padding: 13px 23px;
-    font-family: 'Inter';
     font-size: 15px;
     margin-top: 7px;
+     background-color: #fcff5b;
+    color: #222;
 }
 .aboutbtn:hover {
-    background-color: #fcff5b;
-    color: #222;
+          color: #222;
+    background-color: #a7c4d7;
     transform: translateY(-2px);
 }
 /* TESTIMONIALS SECTION */
@@ -155,7 +154,7 @@ nav ul li a:hover {
      font-weight: 600;
   margin-bottom: 10px;
    color: #1A1A1A;
-    font-family: var(--font-heading-family);
+    font-family: "Libre Baskerville", serif;
 }
 
 
@@ -296,7 +295,7 @@ section#portfolio {
     margin-bottom: 20px;
     color: #1A1A1A;
     font-weight: 600;
-    font-family: var(--font-heading-family);     text-align: center;}
+    font-family: "Libre Baskerville", serif;     text-align: center;}
 .portfolio #portfolio-flters {
   padding: 1px 20px;
     list-style: none;
@@ -310,12 +309,12 @@ section#portfolio {
 .portfolio #portfolio-flters li {
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #555;
   background-color: #fff;
-  margin: 8px;
-  padding: 8px 18px;
+ margin: 8px 5px;
+  padding: 8px 15px;
   border: 1px solid transparent;
   border-radius: 30px;
   display: inline-block;
@@ -401,7 +400,7 @@ background-color: #fcff5b;
   font-size: 36px;
       font-weight: 600;
   margin-bottom: 20px;
-    font-family: var(--font-heading-family);
+    font-family: "Libre Baskerville", serif;
   color: #222;
 }
 /* SHOW MORE BUTTON */
@@ -414,7 +413,6 @@ background-color: #fcff5b;
     transition: background 0.3s ease, transform 0.2s ease;
     border-radius: 100px;
     padding: 8px 23px;
-    font-family: 'Inter';
     font-size: 15px;
     width: 130px;
     margin: 0 auto;
