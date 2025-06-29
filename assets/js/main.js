@@ -68,45 +68,24 @@ window.addEventListener("load", () => {
   });
 
   // -------------------------
-  // Portfolio Filtering + Show More
+  // Portfolio Filtering (Only)
   // -------------------------
 
   const filters = document.querySelectorAll("#portfolio-flters li");
   const portfolioItems = document.querySelectorAll(".portfolio-item");
-  const showMoreBtn = document.getElementById("showMoreBtn");
-  const ITEMS_TO_SHOW = 9; // items to show initially
   let currentFilter = ".filter-custom";
-  let showingAll = false;
 
-  function getCategoryCount(filterValue) {
-    return [...portfolioItems].filter(item => item.classList.contains(filterValue.slice(1))).length;
-  }
-
-  function filterItems(filterValue, showAll = false) {
-    let visibleCount = 0;
-
+  function filterItems(filterValue) {
     portfolioItems.forEach(item => {
       if (item.classList.contains(filterValue.slice(1))) {
-        if (showAll || visibleCount < ITEMS_TO_SHOW) {
-          item.style.display = "block";
-          visibleCount++;
-        } else {
-          item.style.display = "none";
-        }
+        item.style.display = "block";
       } else {
         item.style.display = "none";
       }
     });
-
-    // Show or hide the Show More button based on items left to show
-    if (!showAll && visibleCount < getCategoryCount(filterValue)) {
-      showMoreBtn.style.display = "block";
-    } else {
-      showMoreBtn.style.display = "none";
-    }
   }
 
-  // Initial load — show default filtered items
+  // Initial load — show default category
   filterItems(currentFilter);
 
   // Set active class on default filter
@@ -118,18 +97,11 @@ window.addEventListener("load", () => {
   filters.forEach(filter => {
     filter.addEventListener("click", () => {
       currentFilter = filter.getAttribute("data-filter");
-      showingAll = false;
 
       filters.forEach(f => f.classList.remove("filter-active"));
       filter.classList.add("filter-active");
 
       filterItems(currentFilter);
     });
-  });
-
-  // Show More button click handler
-  showMoreBtn.addEventListener("click", () => {
-    showingAll = true;
-    filterItems(currentFilter, true);
   });
 });
