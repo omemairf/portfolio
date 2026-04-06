@@ -1,0 +1,406 @@
+/* =======================
+   Base Styles
+======================= */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f1ede1;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* =======================
+   Navbar
+======================= */
+#hero_nav {
+  background: #b82424;
+}
+
+.navbar {
+  border: 1px solid #9999996e;
+  border-radius: 6px;
+  margin: 0 58px;
+  background: #fff;
+  position: relative;
+  top: 29px;
+  padding: 10px;
+}
+
+a.nav-link, a.navbar-brand {
+  font-family: monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero p {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: recoleta;
+}
+
+.hero-btn {
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+  background: #222;
+}
+
+.hero span {
+  background: #ffd9dfe8;
+  padding: 5px 10px;
+}
+
+/* =======================
+   Marquee / Banner
+======================= */
+.marquee {
+  background: #b82424;
+    padding: 15px 20px;
+    color: #cfcece;
+  font-weight: 500;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+/* =======================
+   Sections
+======================= */
+.section {
+  padding: 60px 20px;
+}
+
+/* =======================
+   About Me
+======================= */
+.aboutme {
+  background: #f1ede1;
+  padding: 50px 0;
+}
+
+.aboutme h2 {
+  color: #b82424;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 35px;
+  font-size: 45px;
+}
+
+.aboutme p {
+  letter-spacing: 0.6px;
+  color: #b82424;
+  line-height: 26px;
+  text-align: justify;
+  font-size: 15px;
+  padding-right: 50px;
+}
+
+/* =======================
+   Projects / Portfolio
+======================= */
+#allprojects, .allprojects {
+  background: #fff;
+  padding: 0px 0;
+}
+#allprojects {
+  background: #b82424;
+  padding: 70px 0;
+}
+#allprojects h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+#allprojects p {
+  letter-spacing: 0.6px;
+  color: #fff;
+  line-height: 26px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+#allprojects .infoholder {
+    padding-right: 50px;
+}
+/* =======================
+   Swiper (Portfolio Slider)
+======================= */
+.mySwiper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+  cursor: grab;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  width: 300px !important; /* default slide size */
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
+}
+
+.swiper-slide-active {
+  transform: scale(1) !important;
+}
+
+.card {
+  border-radius: 0px;
+  overflow: hidden;
+  border: 0;
+}
+
+.allprojects .card {
+  width: 100%;
+  border: 1px solid #222;
+}
+
+#portfolio .swiper {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+#portfolio .swiper-slide {
+  width: 260px;
+}
+
+#portfolio .swiper-slide img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#portfolio {
+  background: #f1ede1;
+}
+
+#portfolio .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+#portfolio {
+  padding-bottom: 0 !important;
+}
+#portfolio .swiper {
+  height: auto !important;
+}
+.swiper-slide {
+  transform: scale(1) !important;
+  transition: none !important;
+}
+
+.swiper-slide-active {
+  transform: scale(1) !important;
+}
+#portfolio .swiper-slid{box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
+#portfolio .swiper-wrapper {
+  align-items: center;
+}
+#portfolio .swiper-slide img {
+  width: 100%;
+  height: 450px;       /* adjust this */
+  object-fit: cover;   /* keeps it clean */
+  border-radius: 0px;  /* optional */
+}
+#portfolio h2 {
+    color: #b82424;
+    font-weight: 600;
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 10px;
+    font-size: 34px;
+    text-align: center;
+}
+#portfolio h3 {
+    color: #222;
+    font-weight: 600;
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 10px;
+    font-size: 39px;
+    text-align: center;
+}
+
+/* =======================
+   Logo Swiper
+======================= */
+.swiperrlogo, section#swiperrlogo {
+  background: #fff;
+  padding: 30px 0;
+  width: 100%;
+}
+
+
+
+#swiperrlogo img {
+  width: 90px;
+  height: 73px;
+}
+
+#swiperrlogo p {
+  font-size: 13px;
+  line-height: 36px;
+  letter-spacing: 0;
+  font-weight: 652;
+}
+    .col-md-1 {
+        flex: 0 0 auto;
+        width: 9.333333%;
+        padding: 0 25px;
+        display: block;
+        margin: 0 auto;
+    }
+
+#swiperrlogo h2 {
+  font-size: 45px;
+  line-height: 56px;
+  letter-spacing: -.6px;
+  font-weight: 652;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px !important;
+  color: #b82424;
+  font-family: "Libre Baskerville", serif;
+}
+
+/* =======================
+   Navigation Pills
+======================= */
+ul.nav.nav-pills {
+    background: #40404014;
+    padding: 7px;
+    border-radius: 100px;
+    margin: 0px 41%;
+}
+.nav-pills .nav-link {
+  border-radius: var(--bs-nav-pills-border-radius);
+  color: #adadad;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: .2px;
+}
+
+.nav-pills .nav-link.active {
+  color: #141414;
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+/* =======================
+   Footer
+======================= */
+.footer {
+  text-align: center;
+  padding: 15px 20px;
+  background: #b82424;
+  color: #fff;
+  margin: 0;
+}
+
+.footer p {
+    margin-bottom: 0 !important;
+    font-family: 'Poppins';
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+/* =======================
+   Media Queries
+======================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .navbar {
+    margin: 0 18px;
+    padding: 3px;
+}
+.hero p {
+    font-size: 30px;}
+    .aboutme p {
+    line-height: 25px;
+    font-size: 14px;
+    padding-right: 0;
+    padding: 0 10px;
+    text-align: center;
+}
+    ul.nav.nav-pills {
+        padding: 4px;
+        margin: 0px 18% !important;
+        margin-bottom: 15px !important;
+    }
+#swiperrlogo h2 {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px !important;
+}
+#allprojects h2 {font-size: 32px;}
+ #portfolio h2 {font-size: 15px;}
+#allprojects .infoholder {
+    padding-right: 0px;
+}
+#portfolio h3 {
+ font-size: 35px;
+}
+#allprojects p {
+    line-height: 23px;
+    font-size: 14px;
+    margin-bottom: 20px;}
+    #allprojects {
+
+    padding: 40px 0;
+}
+.col-md-1 {
+    flex: 0 0 auto;
+    width: 20.333333%;
+    padding: 0 4px;
+    margin-bottom: 0 !important;
+}
+#swiperrlogo img {
+    width: 63px;
+    height: 56px;
+}
+
+#portfolio .swiper {
+    padding: 0px 0;
+}
+}
