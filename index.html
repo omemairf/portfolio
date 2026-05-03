@@ -413,6 +413,10 @@
                                 /></a>
                             </div>
                         </div>
+                        <div class="slider-controls">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="uiTab">
@@ -478,6 +482,10 @@
                                 /></a>
                             </div>
                         </div>
+                        <div class="slider-controls">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -528,11 +536,7 @@
    function createSlider(className) {
     return new Swiper(className, {
         loop: true,
-        speed: 7000,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-        },
+        speed: 600,
 
         freeMode: true,
         freeModeMomentum: false,
@@ -548,36 +552,35 @@
 
         breakpoints: {
             0: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 10,
-                freeMode: true,
+                freeMode: false,
             },
             768: {
                 slidesPerView: 2,
                 spaceBetween: 15,
+                freeMode: true,
             },
             1024: {
                 slidesPerView: 4,
                 spaceBetween: 20,
+                freeMode: true,
             },
         },
     });
 }
 
             // init sliders
-            let sliders = [
-                createSlider("#portfolio .slider1"),
-                createSlider("#portfolio .slider2"),
-                createSlider("#portfolio .slider3"),
-                createSlider("#portfolio .slider4"),
-            ];
+            const sliderSelectors = ["#portfolio .slider1", "#portfolio .slider2"];
+            let sliders = sliderSelectors
+                .filter((selector) => document.querySelector(selector))
+                .map((selector) => createSlider(selector));
 
             // FIX for hidden tabs
             document.querySelectorAll('#portfolio button[data-bs-toggle="pill"]').forEach((tab) => {
                 tab.addEventListener("shown.bs.tab", function () {
                     sliders.forEach((slider) => {
                         slider.update();
-                        slider.autoplay.start();
                     });
                 });
             });
