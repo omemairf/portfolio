@@ -1,1 +1,659 @@
-body{font-family:'Arial',sans-serif;background:#f1ede1;margin:0;padding:0}#hero_nav{background:#b82424}.navbar{border:1px solid #9999996e;border-radius:6px;margin:0 58px;background:#fff;position:relative;top:29px;padding:10px}a.nav-link,a.navbar-brand{font-family:monospace;font-size:16px;text-transform:uppercase;font-weight:500}.hero{text-align:center;padding:100px 20px}.hero p{font-size:60px;font-weight:700;font-family:"Poppins",sans-serif;margin:0;color:#fff}.hero h1{font-size:5rem;font-weight:800;font-family:recoleta}.hero-btn{padding:8px 20px;border:0;border-radius:50px;font-size:15px;font-family:"Nunito",sans-serif;font-weight:600;color:#fff;margin-top:10px;background:#222}.hero span{background:#ffd9dfe8;padding:5px 10px}.marquee{background:#b82424;padding:15px 20px;color:#cfcece;font-weight:500;font-family:'Poppins';text-transform:uppercase;font-size:14px;letter-spacing:4px}.section{padding:60px 20px}.aboutme{background:#f1ede1;padding:50px 0}.aboutme h2{color:#b82424;text-align:center;font-weight:600;font-family:"Libre Baskerville",serif;margin-bottom:35px;font-size:45px}.aboutme p{letter-spacing:.6px;color:#b82424;line-height:26px;text-align:justify;font-size:15px;padding-right:50px}#allprojects,.allprojects{background:#fff;padding:0}#allprojects{background:#b82424;padding:70px 0}#allprojects h2{color:#fff;text-align:center;font-weight:600;font-family:"Libre Baskerville",serif;margin-bottom:10px;font-size:40px}#allprojects p{letter-spacing:.6px;color:#fff;line-height:26px;text-align:center;font-size:16px;font-family:'Poppins'}#allprojects .infoholder{padding-right:50px}.mySwiper{padding-top:50px;padding-bottom:50px}.swiper{width:100%;padding:20px 0;cursor:grab}.swiper-slide{display:flex;justify-content:center;width:300px!important;transform:scale(0.8);transition:transform .5s ease}.swiper-slide-active{transform:scale(1)!important}.card{border-radius:0;overflow:hidden;border:0}.allprojects .card{width:100%;border:1px solid #222}#portfolio .swiper{padding-top:0;padding-bottom:30px}#portfolio .swiper-slide{width:260px}#portfolio .swiper-slide img{width:100%;border-radius:15px}#portfolio{background:#f1ede1}#portfolio .swiper-wrapper{transition-timing-function:linear!important}#portfolio{padding-bottom:0!important}#portfolio .swiper{height:auto!important}.swiper-slide{transform:scale(1)!important;transition:none!important}.swiper-slide-active{transform:scale(1)!important}#portfolio .swiper-slid{box-shadow:#0000001a 0 4px 6px -1px,#0000000f 0 2px 4px -1px}#portfolio .swiper-wrapper{align-items:center}#portfolio .swiper-slide img{width:100%;height:450px;object-fit:cover;border-radius:0}#portfolio h2{color:#b82424;font-weight:600;font-family:"Libre Baskerville",serif;margin-bottom:10px;font-size:34px;text-align:center}#portfolio h3{color:#222;font-weight:600;font-family:"Libre Baskerville",serif;margin-bottom:10px;font-size:39px;text-align:center}.swiperrlogo,section#swiperrlogo{background:#fff;padding:30px 0;width:100%}#swiperrlogo img{width:90px;height:73px}#swiperrlogo p{font-size:13px;line-height:36px;letter-spacing:0;font-weight:652}.col-md-1{flex:0 0 auto;width:9.333333%;padding:0 25px;display:block;margin:0 auto}#swiperrlogo h2{font-size:45px;line-height:56px;letter-spacing:-.6px;font-weight:652;text-align:center;margin-top:20px;margin-bottom:50px!important;color:#b82424;font-family:"Libre Baskerville",serif}ul.nav.nav-pills{background:#40404014;padding:7px;border-radius:100px;margin:0 41%}.nav-pills .nav-link{border-radius:var(--bs-nav-pills-border-radius);color:#adadad;font-weight:600;font-size:15px;line-height:22px;letter-spacing:.2px}.nav-pills .nav-link.active{color:#141414;background-color:#fff;border-radius:100px}.footer{text-align:center;padding:15px 20px;background:#b82424;color:#fff;margin:0}.footer p{margin-bottom:0!important;font-family:'Poppins'}.swiper-button-next,.swiper-button-prev{display:none}@media (max-width: 767px){.swiper-button-next,.swiper-button-prev{display:block}}@media (max-width: 768px){.hero h1{font-size:2rem}.navbar{margin:0 18px;padding:3px}.hero p{font-size:30px}.aboutme p{line-height:25px;font-size:14px;padding:0 10px;text-align:center}ul.nav.nav-pills{padding:4px;margin:0 18%!important;margin-bottom:15px!important}#swiperrlogo h2{font-size:32px;margin-top:10px;margin-bottom:20px!important}#allprojects h2{font-size:32px}#portfolio h2{font-size:15px}#allprojects .infoholder{padding-right:0}#portfolio h3{font-size:35px}#allprojects p{line-height:23px;font-size:14px;margin-bottom:20px}#allprojects{padding:40px 0}.col-md-1{flex:0 0 auto;width:20.333333%;padding:0 4px;margin-bottom:0!important}#swiperrlogo img{width:63px;height:56px}#portfolio .swiper{padding:0}}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+body {
+	color: #4a5355;
+	 font-family: 'Open Sans';
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	background: #fff;
+	overflow-x: hidden;
+}
+
+html,
+body { height: 100%;position:relative;  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0px;
+  margin: 0px; 
+   font-family: 'Open Sans';
+  color: #0b104a;
+  font-weight: 400;
+}
+a {
+ font-family: 'Open Sans';
+text-decoration: none;
+color: #0b104a;
+-webkit-transition: all 0.2s ease 0s;
+transition: all 0.2s ease 0s;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+p {
+    margin-bottom: 0;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+::-moz-selection {
+	background: #222;
+	color: #ffffff;
+}
+::selection {
+	background: #222;
+	color: #ffffff;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section-padding {padding:80px 0;}
+/*START SECTION TITLE DESIGN*/
+.section-title{margin-bottom:60px;}
+.section-title h2 {
+	font-size: 40px;
+	font-weight: 600;
+	margin-top: 0;
+	position: relative;
+	line-height: 50px;
+}
+.section-title p{
+width:60%;
+margin:auto;
+margin-top: 20px;
+}
+.section-title b{color:#222;font-weight: 600;}
+
+/*END SECTION TITLE DESIGN*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.START NAVIGATION
+* ----------------------------------------------------------------------------------------
+*/
+#sm_menu_ham span {
+    background-color: #222 !important;
+}
+.col-20{
+	width: 20%;
+}
+.col-60{
+	width: 60%;
+}
+.col-20{
+	width: 20%;
+}
+.site-logo{
+	width: 150px;
+}
+.site-logo a{
+	display: block;
+}
+.site-logo img{
+	max-width: 100%;
+}
+#navigation{
+	border-bottom: 1px solid #ddd;
+}
+.navigation2{
+	border-bottom: 0px !important;
+	background:#fff;
+}
+
+.navbar-fixed {
+    z-index: 999;
+    position: fixed;
+    opacity: .98;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=98)";
+    width: 100%;
+    top: 0;
+    -webkit-animation: fadeInDown 800ms;
+    animation: fadeInDown 800ms;
+    -webkit-backface-visibility: hidden;
+    border-radius: 0px;
+    background: #fff;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.03);
+}
+
+#main-menu ul{
+	list-style-type: none;
+}
+
+#main-menu ul li {
+	display: inline-block;
+	padding: 0 15px;
+	position: relative;
+	line-height: 60px;
+}
+
+#main-menu ul li a {
+	position: relative;
+	color: #0b104a;
+	font-weight: 600;
+	transition: .5s;
+	font-size: 16px;
+}
+#main-menu ul li a:hover,
+#main-menu ul li a:focus{
+	color: #222;
+}
+#navigation .header-btn {
+	padding-right:20px;
+}
+
+
+
+/*-------------------------------
+# Dropdwon menu 
+--------------------------------*/
+
+#navigation #main-menu ul li ul ,
+#navigation #main-menu ul li ul li ul {	
+	background: #222;
+	-webkit-box-shadow: 0 0 10px 3px rgba(0,0,0,.05);
+	box-shadow: 0 0 10px 3px rgba(0,0,0,.05);
+	left: -55px;
+	list-style: outside none none;
+	margin:  0;
+	opacity: 0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	padding:10px;
+	position: absolute;
+	text-align: left;
+	top: 120%;
+	-webkit-transition:all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+	visibility: hidden;
+	width: 210px;
+	z-index: 999;
+	border-radius: 4px;
+	border-top: 2px solid #222;
+}
+#navigation #main-menu .menu-item-has-children {
+	position: relative;
+	margin-right: 20px;
+}
+#navigation #main-menu .menu-item-has-children::after {
+	position: absolute;
+	content: "\e64b";
+	font-family: themify;
+	margin-top: 0px;
+	margin-left: 0;
+	font-size: 10px;
+	right: -10px;
+	top: 0px;
+	color: #0b104a;
+	font-size: 13px;
+	font-weight: 600;
+}
+#navigation #main-menu ul li  ul li{
+	position: relative;
+}
+#navigation #main-menu ul li ul li ul{
+	top: 0;
+	right: auto;
+	left: 205px;
+}
+#navigation.navbar-fixed #main-menu ul li li a{
+	color: #fff;
+} 
+#navigation #main-menu ul li:hover ul,
+#navigation #main-menu ul li ul li:hover > ul{
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
+	visibility: visible;
+	top: 100%;
+}
+#navigation #main-menu ul li ul li {display: block; margin: 0; padding: 0;}
+
+#navigation #main-menu ul li ul li a {
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 600;
+	padding: 5px 12px;
+	position: relative;	
+	transition: all 0.3s ease 0s !important;
+	visibility: inherit !important;
+	opacity: inherit !important;
+	text-transform: capitalize;
+}
+
+#navigation #main-menu ul li ul li a:hover{
+	color: #fff;
+	background-color: #222;
+	text-decoration: none;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END NAVIGATION
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*-------------------------------
+# Hero
+--------------------------------*/
+.hero
+{
+	    background: #222;
+    padding: 40px 0;
+}
+.hero h1 {
+    font-family: 'Open Sans';
+    margin: 0;
+    color: #fff;
+  font-size: 4.99vw;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 79px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+}
+
+.hero-btn {
+    border-radius: 1.736vw;
+    font-size: 18px;
+    line-height: 2.222vw;
+    padding: 0.556vw 2.042vw;
+    color: #222;
+    margin-top: 10px;
+    background: #fff;
+    border: 0;
+    font-weight: 600;
+}
+/* =========================
+   MARQUEE
+========================= */
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: #222;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 90s linear infinite;
+}
+
+.marquee-text {
+    white-space: nowrap;
+    padding: 15px 20px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 2.444vw;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 26px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =========================
+   PORTFOLIO / SWIPER
+========================= */
+.mySwiper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+    cursor: grab;
+}
+.swiper-slide {
+    transform: none !important;
+    scale: 1 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transition: none !important;
+}
+
+
+.card {
+    border-radius: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.allprojects .card {
+    width: 100%;
+    border: 1px solid #222;
+}
+
+/* =========================
+   PORTFOLIO SECTION
+========================= */
+#portfolio {
+    background: #fff;
+    padding-bottom: 0!important;
+}
+
+#portfolio .swiper {
+    padding-top: 0;
+    padding-bottom: 30px;
+    height: auto!important;
+}
+
+#portfolio .swiper-wrapper {
+    transition-timing-function: linear!important;
+    align-items: center;
+}
+
+#portfolio .swiper-slide {
+    width: 260px;
+}
+
+#portfolio .swiper-slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+#portfolio h3 {
+    color: #222;
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 5vw;
+    text-align: center;
+    font-style: italic;
+}
+/* =========================
+   NAV PILLS
+========================= */
+ul.nav.nav-pills {
+    background: #40404014;
+    padding: 7px;
+    font-family: 'Open Sans';
+    border-radius: 100px;
+    margin: 0 40%;
+}
+
+.nav-pills .nav-link {
+    border-radius: var(--bs-nav-pills-border-radius);
+    color: #adadad;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: .2px;
+}
+
+.nav-pills .nav-link.active {
+    color: #141414;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+/* =========================
+   MY NAME SECTION
+========================= */
+.myname {
+    padding: 6.111vw 0vw;
+    text-align: center;
+    background-color: #fffb9a;
+}
+
+.myname h3 {
+    font-size: 3.333vw;
+    line-height: 3.472vw;
+    margin-bottom: 1.667vw;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.myname p {
+    font-family: 'Open Sans';
+    font-size: 1.528vw;
+    line-height: 2.083vw;
+    margin-bottom: 32px;
+}
+
+/* =========================
+   UPWORK BUTTON
+========================= */
+a.upwork-btn {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: normal;
+    outline: none;
+    padding: 13px 27px !important;
+    width: 100%;
+    max-width: 282px;
+    margin-right: 16px;
+    background-color: #fff !important;
+    border-radius: 40px;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    font-style: revert;
+    text-transform: uppercase;
+}
+/* =========================
+   ABOUT ME
+========================= */
+.aboutme {
+   background: linear-gradient(270deg, #fbadbdb3, #dceef9b3);
+    padding: 70px 0;
+}
+
+.aboutme h2 {
+    color: #000;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: "Inria Serif", serif;
+    font-style: italic;
+}
+.aboutme p {
+    color: #000;
+    font-size: 15px;
+    line-height: 28px;
+    font-family: 'Open Sans';
+}
+
+.aboutme img {
+    width: 80%;
+    transform: rotate(-5deg);
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.START PARTNER & VIDEO DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.partner-logo.section-padding {
+    padding: 15px 0;
+}
+.part_bg {
+	background: #fff;
+	padding: 16px;
+	border: 1px solid #e8e8e9;
+	border-radius: 5px;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.03);
+}
+
+.partner_title h3 {
+	font-weight: 600;
+font-size: 23px;
+    line-height: 30px;
+}
+.partner_title h3 span{color:#222;}
+.partner {margin-top: 20px;}
+.partner a img {
+    width: 80%;
+    transform: none;
+    display: block;
+    margin: 0 auto;
+    height: 59px;
+}
+/*END PARTNER CSS*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12.START FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer {
+	background:#222; padding-bottom: 15px;
+}
+
+.foot_copy p {
+    text-align: center;
+    font-weight: 500;
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+}
+
+.foot_copy h4 {
+    font-size: 8.889vw;
+    font-style: italic;
+    font-weight: 800;
+    TEXT-ALIGN: center;
+    color: #fff;
+    background: #000;
+    padding: 24px 0 0 0;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 12.END FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 1024px){
+#main-menu ul li {padding: 0 6px;}
+}
+
+@media only screen and (max-width: 960px){
+#navigation{border-bottom: 0px;}
+}
+
+@media only screen and (max-width: 960px){
+#navigation.navbar-fixed{display:none;}
+}
+@media only screen and (max-width: 991px) {
+    #sm_menu_ham {
+        display: block;
+        top: 40px;
+        right: 11%;
+        position: absolute;
+    }
+}
+@media only screen and (max-width:768px){
+.section-title p{
+padding-right:0px;
+margin-bottom: 30px;
+}
+}
+
+@media only screen and (max-width: 767px){
+.spt-130 {
+padding-top: 90px;
+}
+
+#mobile_menu{
+display: block;
+width: 100%;
+}
+}
+
+@media only screen and (max-width: 575px){
+#sm_menu_ham {
+top: 23px;
+}
+
+.hero h1 {
+text-align: center;
+font-size: 6.99vw;
+line-height: 39px;
+}
+.hero p {
+    font-size: 14px;
+    text-align: center;
+}
+.hero-text-img.text-center {
+    display: none;
+}
+.marquee-text {
+    font-size: 6.444vw;
+    padding-bottom: 19px;
+}
+.aboutme h2 {
+    font-size: 30px;text-align: center;}
+    .aboutme p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 27px;}
+    .partner_title h3 {
+    text-align: center;
+}
+.partner a img {
+    width: 59%;
+    margin-bottom: 10px;
+}
+.aboutme img {
+    transform: none;}
+    #portfolio h3 {
+    font-size: 6vw;}
+    ul.nav.nav-pills {
+    padding: 0px;
+    margin: 0 17%;
+}
+
+.hero {
+ padding: 80px 0;
+}
+}
+
+
+@media only screen and (max-width:480px){
+.section-title h2 {
+font-size: 35px;
+}
+}
