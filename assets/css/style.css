@@ -113,6 +113,23 @@ margin-top: 20px;
 }
 #navigation{
 	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
+#navigation .navbar-nav .nav-link{
+	color: #0b104a;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 10px 14px;
+}
+#navigation .navbar-nav .nav-link:hover,
+#navigation .navbar-nav .nav-link:focus{
+	color: #222;
+}
+#navigation .navbar-toggler{
+	border-color: #0b104a;
+}
+#navigation .navbar-toggler:focus{
+	box-shadow: none;
 }
 .navigation2{
 	border-bottom: 0px !important;
@@ -367,8 +384,9 @@ margin-top: 20px;
 
 #portfolio .swiper {
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 68px;
     height: auto!important;
+    margin-bottom: 30px;
 }
 
 #portfolio .swiper-wrapper {
@@ -387,6 +405,46 @@ margin-top: 20px;
     border-radius: 0;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
                 rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+#portfolio .swiper-button-prev,
+#portfolio .swiper-button-next {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #c2d6ff;
+    color: #222;
+}
+#portfolio .swiper-button-prev::after,
+#portfolio .swiper-button-next::after {
+    content: "";
+}
+#portfolio .swiper-button-prev::before,
+#portfolio .swiper-button-next::before {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    color: #222;
+}
+#portfolio .swiper-button-prev::before {
+    content: "←";
+}
+#portfolio .swiper-button-next::before {
+    content: "→";
+}
+#portfolio .slider-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 12;
+}
+#portfolio .swiper-button-prev,
+#portfolio .swiper-button-next {
+    position: static;
+    margin-top: 0;
 }
 
 #portfolio h3 {
@@ -429,7 +487,7 @@ ul.nav.nav-pills {
    MY NAME SECTION
 ========================= */
 .myname {
-    padding: 6.111vw 0vw;
+    padding: 50px 0;
     text-align: center;
     background-color: #fffb9a;
 }
@@ -503,39 +561,6 @@ a.upwork-btn {
 
 /*
 * ----------------------------------------------------------------------------------------
-* 08.START PARTNER & VIDEO DESIGN
-* ----------------------------------------------------------------------------------------
-*/
-.partner-logo.section-padding {
-    padding: 15px 0;
-}
-.part_bg {
-	background: #fff;
-	padding: 16px;
-	border: 1px solid #e8e8e9;
-	border-radius: 5px;
-	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.03);
-}
-
-.partner_title h3 {
-	font-weight: 600;
-font-size: 23px;
-    line-height: 30px;
-}
-.partner_title h3 span{color:#222;}
-.partner {margin-top: 20px;}
-.partner a img {
-    width: 80%;
-    transform: none;
-    display: block;
-    margin: 0 auto;
-    height: 59px;
-}
-/*END PARTNER CSS*/
-
-
-/*
-* ----------------------------------------------------------------------------------------
 * 12.START FOOTER DESIGN
 * ----------------------------------------------------------------------------------------
 */
@@ -584,6 +609,9 @@ font-size: 23px;
         right: 11%;
         position: absolute;
     }
+	#navigation .navbar-collapse{
+		padding-top: 10px;
+	}
 }
 @media only screen and (max-width:768px){
 .section-title p{
@@ -630,16 +658,17 @@ line-height: 39px;
     text-align: center;
     font-size: 14px;
     line-height: 27px;}
-    .partner_title h3 {
-    text-align: center;
-}
-.partner a img {
-    width: 59%;
-    margin-bottom: 10px;
-}
 
     #portfolio h3 {
     font-size: 6vw;}
+    #portfolio .swiper-slide img {
+    height: 300px;
+}
+    #portfolio .swiper-button-prev,
+    #portfolio .swiper-button-next {
+    width: 32px;
+    height: 32px;
+}
     ul.nav.nav-pills {
     padding: 0px;
     margin: 0 17%;
